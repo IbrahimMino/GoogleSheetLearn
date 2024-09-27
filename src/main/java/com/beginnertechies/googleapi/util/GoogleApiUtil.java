@@ -81,8 +81,6 @@ public class GoogleApiUtil {
     public static Map<Object, Object> getDataFromSheet() throws GeneralSecurityException, IOException {
         // Build a new authorized API client service.
         final String spreadsheetId = "1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms";
-//        final String spreadsheetId = "1ix3ImX6fS9ToqdcTNZ-I_6URQR88FibEP4OR0peSXVw";
-//		final String spreadsheetId = "AIzaSyDc0Ha0mRg3x-C6zu6ET5K2i03JLuNyCkE";
         final String range = "Class Data!A2:E";
         Sheets service = getSheetService();
         ValueRange response = service.spreadsheets().values().get(spreadsheetId, range).execute();
